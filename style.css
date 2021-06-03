@@ -139,4 +139,14 @@ body {
         padding: .25rem;
         box-shadow: 0 0 20px#FF61BE;
       }
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
       
