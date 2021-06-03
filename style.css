@@ -133,11 +133,12 @@ body {
         cursor: pointer;
       }
       .clock {
-        color: #ff61be;
+        color: hsl(325, 100%, 69%);
         font-size: 2rem;
-        /* border-radius: 10px; */
+        border-radius: 10px;
         padding: .25rem;
         box-shadow: 0 0 20px#FF61BE;
       }
+      
 
-    
+      
