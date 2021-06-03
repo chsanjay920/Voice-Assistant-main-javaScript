@@ -267,6 +267,7 @@ function frequency_bar() {
     }, function (e) {
         return console.log(`error: ${e}`);
     });
+}
 
 
   
