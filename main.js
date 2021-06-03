@@ -54,6 +54,9 @@ function startRecognization() {
                 talking('Redirecting you')
                 window.open('https://mail.google.com/mail/u/0/')
             }
+            else if(text.includes('Bye')||text.includes('Good bye')){
+                talking('Thank you sir. Take care')
+            }
 
         }
     })
