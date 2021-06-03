@@ -22,32 +22,31 @@ function startRecognization() {
         if (e.results[0].isFinal) {
             if (text.includes('hello')||text.includes('Hello')||text.includes('hai')||text.includes('Hai')) {
                 talking('hai boss how are you');
-                if(text.includes('fine')||text.includes('Fine')||text.includes('good')||text.includes('Good')||text.includes('Great')){
-                talking('Its good to know that you are fine boss')
-                }
             }
-            else if(text.includes('how are you')||('How are you')||('how are you doing')){
+            else if(text.includes('fine')||text.includes('Fine')||text.includes('good')||text.includes('Good')||text.includes('Great')){
+                talking('Ready to assist yor sir')
+            }
+            else if(text.includes('how are you')||text.includes('How are you')){
                 talking('I am doing great boss. Thank you')
             }
-            else if(text.includes('Open YouTube')||text.includes('open Youtube')||text.includes('play videos')){
-
+            else if(text.includes('Open YouTube')||text.includes('open YouTube')||text.includes('play videos')||text.includes('open Youtube')||text.includes('Youtube')){
               talking('Executing command')
               window.open('https://www.youtube.com/');
             }
-            else if(text.includes('Open WhatsApp')){
+            else if(text.includes('Open WhatsApp')||text.includes('open WhatsApp')||text.includes('WhatsApp')||text.includes('messages')){
               talking('Executing whatsapp')
               window.open('https://www.whatsapp.com/?lang=en','_blank');
             }
-            else if(text.includes('Open Instagram')){
+            else if(text.includes('Open Instagram')||text.includes('open Instagram')||text.includes('Reels')||text.includes('Instagram')){
               talking('opening insta grammer')
               window.open('https://www.instagram.com/','_blank')
             }
-            else if(text.includes('Open twitter')||text.includes('Tweet')){
+            else if(text.includes('Open Twitter')||text.includes('Tweet')||text.includes('open Twitter')){
                 talking('opening twitter')
                 window.open('https://twitter.com/home?lang=en')
             }
             else if(text.includes('Wikipedia')||text.includes('open wikipedia')){
-                talking('wikipedia the free encyclopedia')
+                talking('Search the free encyclopedia')
                 window.open('https://www.wikipedia.org/')
             }
 
