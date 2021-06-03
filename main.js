@@ -28,6 +28,9 @@ function startRecognization() {
             else if (text.includes('how are you') || text.includes('How are you')) {
                 talking('I am doing great boss. Thank you')
             }
+            else if(text.includes('what is your name')||('your good name please')){
+                talking('I am Rocket. I am your personal voice assistant')
+            }
             else if (text.includes('Open YouTube') || text.includes('open YouTube') || text.includes('play videos') || text.includes('open Youtube') || text.includes('Youtube')) {
                 talking('Executing command')
                 window.open('https://www.youtube.com/');
