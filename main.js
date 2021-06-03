@@ -33,7 +33,7 @@ function startRecognization() {
                 window.open('https://www.youtube.com/');
             }
             else if (text.includes('Open WhatsApp') || text.includes('open WhatsApp') || text.includes('WhatsApp') || text.includes('messages')) {
-                talking('Executing whatsapp')
+                talking('Executing command')
                 window.open('https://www.whatsapp.com/?lang=en', '_blank');
             }
             else if (text.includes('Open Instagram') || text.includes('open Instagram') || text.includes('Reels') || text.includes('Instagram')) {
