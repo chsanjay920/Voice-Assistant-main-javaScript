@@ -20,7 +20,7 @@ function startRecognization() {
         console.log(text);
 
         if (e.results[0].isFinal) {
-            if (text.includes('Hello','hello','hai')) {
+            if (text.includes('hello')) {
                 talking('hai boss how are you');
             }
             else if(text.includes('Open YouTube','open youtube','YouTube','play videos')){
