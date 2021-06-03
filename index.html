@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Assistant | java Script</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"> </script> -->
+  <script src="./main.js"></script>
 </head>
+
 <body>
-    <section>
-      <div class="clock"></div>
-        <div class="wrapper">
-            <a onclick="startRocket()"><img src="logo.png" alt="logo"></a>
-            <br>
-            <div class="progress_bar" id="progress_bar" >
-              <div class="progress__square" id="myBar"></div>
-            </div>
-            <!-- <div class="initialization" id='initialization'>
-              <div class="frequency detection">             
-                <input class="zoom" type="range" min="1" max="5" step="1" value="5"/>
-                <div class="pitch"></div>
-                <br>
-                <div class="freq" style="color: aqua;"></div>
-                <br>
-                <canvas id="canvas" width="350%" height="80%" style="border:4px solid #a2f0e6;box-shadow: rgba(248, 203, 0, 0.993) 0px 7px 29px 0px;"></canvas>
-              </div>   
-            </div> -->
-        </div>
-    </section>
-    <script src="./main.js"></script>
+  <section>
+    <div class="clock"></div>
+    <div class="wrapper">
+      <a onclick="startRocket()"><img src="logo.png" alt="logo"></a>
+      <br>
+      <div class="progress_bar" id="progress_bar">
+        <div class="progress__square" id="myBar"></div>
+      </div>
+      <canvas width="400" height="80" style="border: 1px solid #9ed0ff;"></canvas>
+      <input class="zoom" type="range" min="1" max="5" step="1" value="2" />
+      <div class="pitch"></div>
+      <div class="freq" style="color: aquamarine;"></div>
+    </div>
+  </section>
 </body>
+
 </html>
