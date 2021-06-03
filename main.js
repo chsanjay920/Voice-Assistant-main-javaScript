@@ -20,13 +20,13 @@ function startRecognization() {
         console.log(text);
 
         if (e.results[0].isFinal) {
-            if (text.includes('Hello')) {
+            if (text.includes('Hello'||'hello'||'hai')) {
                 talking('hai boss how are you');
             }
-            else if(text.includes('Open YouTube')){
+            else if(text.includes('Open YouTube'||'open youtube'||'youtube'||'play videos')){
 
               talking('Executing command')
-              window.open('https://www.youtube.com/', '_blank');
+              window.open('https://www.youtube.com/');
             }
             else if(text.includes('Open WhatsApp')){
               talking('Executing whatsapp')
