@@ -20,10 +20,10 @@ function startRecognization() {
         console.log(text);
 
         if (e.results[0].isFinal) {
-            if (text.includes('hello')) {
+            if (text.includes('hello')||text.includes('Hello')||text.includes('hai')||text.includes('Hai')) {
                 talking('hai boss how are you');
             }
-            else if(text.includes('Open YouTube','open youtube','YouTube','play videos')){
+            else if(text.includes('Open YouTube')||text.includes('open Youtube')||text.includes('play videos')){
 
               talking('Executing command')
               window.open('https://www.youtube.com/');
