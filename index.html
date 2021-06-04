@@ -7,23 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voice Assistaint || Rocket</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <script src="https://smtpjs.com/v3/smtp.js"> </script>
- 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <section>
     <div class="clock"></div>
     <div class="wrapper">
+      <div class="textbox">
+        <p id="speech" style="color: aquamarine; font-family: 'Orbitron', sans-serif; border: 2px solid aqua;">
+          Say Rocket before command</p>
+      </div>
       <a onclick="startRocket()"><img src="logo.png" alt="logo"></a>
       <br>
       <div class="progress_bar" id="progress_bar">
         <div class="progress__square" id="myBar"></div>
       </div>
+      <div class="stop">
+        <a onclick="stopRocket()"><img src="stop.png"></a>
+      </div>
     </div>
   </section>
-   <script src="./main.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
