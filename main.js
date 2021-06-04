@@ -34,6 +34,12 @@ function startRecognization() {
                             talking("Invoking Youtube command")
                         }
                         break;
+                    case text.indexOf('search') != -1:
+                        idx = text.indexOf('search')
+                        tosearch = text.slice(idx+7)
+                        talking("searching "+tosearch)
+                        window.open('https://www.google.com/search?q='+tosearch);
+                        break
                     default:
                         talking('Iam Activated command me by my name')
                         break
