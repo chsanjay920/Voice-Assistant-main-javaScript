@@ -67,6 +67,19 @@ body {
       align-items: center;
       flex-direction: column;
   }
+  .textbox{
+    width: 50%;
+    height: auto;
+    
+  }
+  .stop img {
+    position: fixed;
+    bottom: 4px;
+    right: 10px;
+    max-width:10%;
+    height:auto;
+  }
+
   .progress_bar{
       width: 50%;
       height: 5%;
