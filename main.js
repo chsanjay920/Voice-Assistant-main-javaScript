@@ -44,7 +44,7 @@ function startRecognization() {
                         window.open('https://www.google.com/search?q='+tosearch);
                         break
                     default:
-                        talking('Iam Activated command me by my name')
+                        talking('Iam Activated command me by my name... ')
                         break
                 }
             }
