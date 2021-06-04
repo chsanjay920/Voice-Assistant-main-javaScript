@@ -26,13 +26,15 @@ function startRecognization() {
                     case text.indexOf('Open') != -1 || text.indexOf('open') != -1:
                         if (text.includes("WhatsApp") || text.includes("whatsapp")) {
                             talking("Invoking whatsapp command")
-                            window.open(https://api.whatsapp.com/, '_blank').focus();
+                            window.open("https://api.whatsapp.com/", '_blank').focus();
                         }
                         else if (text.includes('Instagram') || text.includes('instagram') || text.includes('insta') || text.includes('reels')) {
                             talking("Invoking Instagram command")
+                            window.open("instagram://user?username=untitled.tiff", '_blank').focus();
                         }
                         else if (text.includes('YouTube') || text.includes('youtube') || text.includes('videos')) {
                             talking("Invoking Youtube command")
+                            window.open("https://www.youtube.com/", '_blank').focus();
                         }
                         break;
                     case text.indexOf('search') != -1:
