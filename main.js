@@ -1,14 +1,15 @@
+displayClock()
 function startRocket() {
     displayClock()
     move()
     startRecognization()
 }
 
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new window.SpeechRecognition();
 function startRecognization() {
-    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new window.SpeechRecognition();
-    recognition.interimResults = true;
 
+    recognition.interimResults = true;
     recognition.addEventListener('result', (e) => {
         const text = Array.from(e.results)
             .map(result => result[0])
@@ -18,46 +19,26 @@ function startRecognization() {
         console.log(text);
 
         if (e.results[0].isFinal) {
-            if (text.includes('hello') || text.includes('Hello') || text.includes('hai') || text.includes('Hai')) {
-                talking('hai boss how are you');
+            if (text.includes('rocket') || text.includes("Rocket")) {
+                document.getElementById("speech").innerHTML = text;
+                console.log(text);
+                switch (true) {
+                    case text.indexOf('Open') != -1 || text.indexOf('open') != -1:
+                        if (text.includes("WhatsApp") || text.includes("whatsapp")) {
+                            talking("Invoking whatsapp command")
+                        }
+                        else if (text.includes('Instagram') || text.includes('instagram') || text.includes('insta') || text.includes('reels')) {
+                            talking("Invoking Instagram command")
+                        }
+                        else if (text.includes('YouTube') || text.includes('youtube') || text.includes('videos')) {
+                            talking("Invoking Youtube command")
+                        }
+                        break;
+                    default:
+                        talking('Iam Activated command me by my name')
+                        break
+                }
             }
-            else if (text.includes('fine') || text.includes('Fine') || text.includes('good') || text.includes('Good') || text.includes('Great')) {
-                talking('Ready to assist yor sir')
-            }
-            else if (text.includes('how are you') || text.includes('How are you')) {
-                talking('I am doing great boss. Thank you')
-            }
-            else if(text.includes('What is your name')|| text.includes('your good name please')){
-                talking('I am Rocket. I am your personal voice assistant')
-            }
-            else if (text.includes('Open YouTube') || text.includes('open YouTube') || text.includes('play videos') || text.includes('open Youtube') || text.includes('Youtube')) {
-                talking('Executing command')
-                window.open('https://www.youtube.com/');
-            }
-            else if (text.includes('Open WhatsApp') || text.includes('open WhatsApp') || text.includes('WhatsApp') || text.includes('messages')) {
-                talking('Executing command')
-                window.open('https://www.whatsapp.com/?lang=en', '_blank');
-            }
-            else if (text.includes('Open Instagram') || text.includes('open Instagram') || text.includes('Reels') || text.includes('Instagram')) {
-                talking('opening insta grammer')
-                window.open('https://www.instagram.com/', '_blank')
-            }
-            else if (text.includes('Open Twitter') || text.includes('Tweet') || text.includes('open Twitter')) {
-                talking('opening tweetter')
-                window.open('https://twitter.com/home?lang=en')
-            }
-            else if (text.includes('Wikipedia') || text.includes('open wikipedia')) {
-                talking('Search the free encyclopedia')
-                window.open('https://www.wikipedia.org/')
-            }
-            else if(text.includes('Open gmail')|| text.includes('Gmail')){
-                talking('Redirecting you')
-                window.open('https://mail.google.com/mail/u/0/')
-            }
-            else if(text.includes('Bye')||text.includes('Good bye')){
-                talking('Thank you sir. Take care')
-            }
-
         }
     })
     recognition.addEventListener('end', () => {
@@ -65,19 +46,21 @@ function startRecognization() {
     })
     recognition.start();
 }
+function stopRocket() {
+    recognition.stop();
+    location.reload();
+}
 
 function talking(speechToSpeek) {
     window.speechSynthesis.speak(new SpeechSynthesisUtterance(speechToSpeek));
 }
 
+
 var i = 0;
 
 function move() {
-    talking(' .... initializing voice assistant .......... checking internet connection..')
+    talking('initializing voice assistant')
     talking('All set aready to launch   ....  hai i am rocket a personal voice assistant ')
-    // setTimeout(() => {
-    //     hideProgressBar()
-    // }, 7000);
     if (i == 0) {
         i = 1;
         var elem = document.getElementById("myBar");
@@ -94,6 +77,7 @@ function move() {
         }
     }
 }
+
 function displayClock() {
     let d = new Date();
     let hours = d.getHours();
