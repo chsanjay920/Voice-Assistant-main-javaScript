@@ -1,6 +1,6 @@
 displayClock()
 function startRocket() {
-    displayClock()
+//     displayClock()
     move()
     startRecognization()
 }
