@@ -25,14 +25,6 @@ function startRecognization() {
                 switch (true) {
                     case text.indexOf('Open') != -1 || text.indexOf('open') != -1:
 
-                        if(text.includes("hi") || text.includes("hello") || text.includes("hai") || text.includes("Hola"))
-                        {
-                            talking("Heyy boss. How are you")
-                            if(text.includes("Fine")||text.includes("Great")||text.includes("what about you"))
-                            {
-                                talking("Good to know sir, I am good")
-                            }
-                        }
                         else if (text.includes("WhatsApp") || text.includes("whatsapp")) {
                             talking("Invoking whatsapp command")
                             window.open("https://www.whatsapp.com/", '_blank');
@@ -55,6 +47,19 @@ function startRecognization() {
                     default:
                         talking('Iam Activated command me by my name... ')
                         break
+
+                    case text.indexOf('Hii')!= -1 || text.indexOf('Hello')!=1 || text.indexOf('Hola'):
+                        talking("Heyy boss. How are you")
+                        if(text.includes("Fine")||text.includes("Great"))
+                        {
+                            talking("Good to know sir")
+                        }
+                        else if(text.includes("What about you"))
+                        {
+                            talking("I am good sir")
+                        }
+
+
                 }
             }
         }
