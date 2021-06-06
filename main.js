@@ -58,9 +58,6 @@ function startRecognization() {
                             talking("I am good sir")
                         }
                         break
-                    default:
-                        talking('Iam Activated command me by my name... ')
-                        break
                 }
             }
         }
