@@ -1,6 +1,5 @@
 displayClock()
 function startRocket() {
-//     displayClock()
     move()
     startRecognization()
 }
@@ -11,7 +10,7 @@ function startRecognization() {
 
     recognition.interimResults = true;
     recognition.addEventListener('result', (e) => {
-        const text = Array.from(e.results)
+        let text = Array.from(e.results)
             .map(result => result[0])
             .map(result => result.transcript)
             .join('');
@@ -21,20 +20,18 @@ function startRecognization() {
         if (e.results[0].isFinal) {
             if (text.includes('rocket') || text.includes("Rocket")) {
                 document.getElementById("speech").innerHTML = text;
+                text = text.toLowerCase()
                 console.log(text);
                 switch (true) {
-                    case text.indexOf('Open') != -1 || text.indexOf('open') != -1:
-                        if (text.includes("WhatsApp") || text.includes("whatsapp")) {
+                    case text.indexOf('open') != -1:
+                        if (text.includes("whatsapp")) {
                             talking("Invoking whatsapp command")
-                            window.open("https://www.whatsapp.com/", '_blank');
                         }
-                        else if (text.includes('Instagram') || text.includes('instagram') || text.includes('insta') || text.includes('reels')) {
+                        else if (text.includes('instagram') || text.includes('insta') || text.includes('reels')) {
                             talking("Invoking Instagram command")
-                            window.open("https://www.instagram.com/", '_blank');
                         }
-                        else if (text.includes('YouTube') || text.includes('youtube') || text.includes('videos')) {
+                        else if (text.includes('youtube') || text.includes('videos')) {
                             talking("Invoking Youtube command")
-                            window.open("https://www.youtube.com/", '_blank');
                         }
                         break;
                     case text.indexOf('search') != -1:
@@ -43,19 +40,8 @@ function startRecognization() {
                         talking("searching "+tosearch)
                         window.open('https://www.google.com/search?q='+tosearch);
                         break
-                    case text.indexOf('hii')!= -1 || text.indexOf('hello')!=1 || text.indexOf('hola'):
-                        talking("Heyy boss. How are you")
-                        if(text.includes("Fine")||text.includes("Great"))
-                        {
-                            talking("Good to know sir")
-                        }
-                        else if(text.includes("What about you"))
-                        {
-                            talking("I am good sir")
-                        }
-                        break
                     default:
-                        talking('Iam Activated command me by my name... ')
+                        talking('Iam Activated command me by my name')
                         break
                 }
             }
@@ -80,7 +66,7 @@ var i = 0;
 
 function move() {
     talking('initializing voice assistant')
-    talking('All set aready to launch   ....  hai i am rocket a personal voice assistant ')
+    // talking('All set aready to launch   ....  hai i am rocket a personal voice assistant ')
     if (i == 0) {
         i = 1;
         var elem = document.getElementById("myBar");
