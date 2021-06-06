@@ -24,8 +24,7 @@ function startRecognization() {
                 console.log(text);
                 switch (true) {
                     case text.indexOf('Open') != -1 || text.indexOf('open') != -1:
-
-                        else if (text.includes("WhatsApp") || text.includes("whatsapp")) {
+                        if (text.includes("WhatsApp") || text.includes("whatsapp")) {
                             talking("Invoking whatsapp command")
                             window.open("https://www.whatsapp.com/", '_blank');
                         }
@@ -58,8 +57,10 @@ function startRecognization() {
                         {
                             talking("I am good sir")
                         }
-
-
+                        break
+                    default:
+                        talking('Iam Activated command me by my name... ')
+                        break
                 }
             }
         }
