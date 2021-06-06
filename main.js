@@ -43,11 +43,7 @@ function startRecognization() {
                         talking("searching "+tosearch)
                         window.open('https://www.google.com/search?q='+tosearch);
                         break
-                    default:
-                        talking('Iam Activated command me by my name... ')
-                        break
-
-                    case text.indexOf('Hii')!= -1 || text.indexOf('Hello')!=1 || text.indexOf('Hola'):
+                    case text.indexOf('hii')!= -1 || text.indexOf('hello')!=1 || text.indexOf('hola'):
                         talking("Heyy boss. How are you")
                         if(text.includes("Fine")||text.includes("Great"))
                         {
@@ -57,6 +53,9 @@ function startRecognization() {
                         {
                             talking("I am good sir")
                         }
+                        break
+                    default:
+                        talking('Iam Activated command me by my name... ')
                         break
                 }
             }
