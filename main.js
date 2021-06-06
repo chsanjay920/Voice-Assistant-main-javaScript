@@ -24,7 +24,16 @@ function startRecognization() {
                 console.log(text);
                 switch (true) {
                     case text.indexOf('Open') != -1 || text.indexOf('open') != -1:
-                        if (text.includes("WhatsApp") || text.includes("whatsapp")) {
+
+                        if(text.includes("hi") || text.includes("hello") || text.includes("hai") || text.includes("Hola"))
+                        {
+                            talking("Heyy boss. How are you")
+                            if(text.includes("Fine")||text.includes("Great")||text.includes("what about you"))
+                            {
+                                talking("Good to know sir, I am good")
+                            }
+                        }
+                        else if (text.includes("WhatsApp") || text.includes("whatsapp")) {
                             talking("Invoking whatsapp command")
                             window.open("https://www.whatsapp.com/", '_blank');
                         }
