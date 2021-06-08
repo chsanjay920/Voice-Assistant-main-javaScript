@@ -45,6 +45,10 @@ function startRecognization() {
                             Speek("Opening Youtube")
                             window.open("https://youtube.com/","_blank");
                         }
+                        else if(text.includes('twitter')||text.includes('tweet')){
+                            Speek("Opening twitter")
+                            window.open("https://twitter.com");
+                        }
                         else{
                             Speek("These are the Results i found")
                             idx = text.indexOf('open')
