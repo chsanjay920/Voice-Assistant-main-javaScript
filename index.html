@@ -5,31 +5,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voice Assistaint || Rocket</title>
+  <title>Rocket || Voice Assistaint </title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Indie+Flower&display=swap"
+    rel="stylesheet">
+  <script src="main.js"></script>
 </head>
-
 <body>
-  <section>
-    <div class="clock"></div>
-    <div class="wrapper">
-      <div class="textbox">
-        <p id="speech" style="color: aquamarine; font-family: 'Orbitron', sans-serif; border: 2px solid aqua;">
-          Say Rocket </p>
-      </div>
-      <a onclick="startRocket()"><img src="logo.png" alt="logo"></a>
-      <br>
-      <div class="progress_bar" id="progress_bar">
-        <div class="progress__square" id="myBar"></div>
-      </div>
-      <div class="stop">
-        <a onclick="stopRocket()"><img src="stop.png"></a>
+  <div class="fullpage-wrapper">
+    <a href="#popup1"> <button class="List_button" id="help">HELP</button></a>
+    <div class="reactor-container">
+      <a onclick="Animation_Control()">
+        <div class="reactor-container-inner circle abs-center"></div>
+        <div class="tunnel circle abs-center"></div>
+        <div class="core-wrapper circle abs-center"></div>
+        <div class="core-outer circle abs-center"></div>
+        <div class="core-inner circle abs-center"></div>
+        <div class="coil-container" id="coilcontainer">
+          <div class="coil coil-1"></div>
+          <div class="coil coil-2"></div>
+          <div class="coil coil-3"></div>
+          <div class="coil coil-4"></div>
+          <div class="coil coil-5"></div>
+          <div class="coil coil-6"></div>
+          <div class="coil coil-7"></div>
+          <div class="coil coil-8"></div>
+        </div>
+      </a>
+      <br><br>
+      <div class="text_box" id="text_box1" onclick="Animation_Control()">
+        <p id="text_box" style="color: aqua;font-size: large;font-family: 'Cabin Sketch', cursive;"> COMMAND ROCKET</p>
       </div>
     </div>
-  </section>
-  <script src="./main.js"></script>
+  </div>
+  
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Hey i am Rocket.</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<ul>
+        <li>Click on circle to launch</li>
+        <li>Say Rocket Open YouTube</li>
+        <li>Say Rocket Open Instagram</li>
+        <li>Say Rocket Open What'sapp</li>
+        <li>Say Rocket Search "Avengers"</li>
+        <li>Say Rocket Hello</li>
+      </ul>
+		</div>
+	</div>
+</div>
 </body>
 
 </html>
