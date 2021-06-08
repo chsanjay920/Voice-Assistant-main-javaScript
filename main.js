@@ -35,15 +35,22 @@ function startRecognization() {
                     case text.indexOf('open') != -1:
                         if (text.includes("whatsapp")) {
                             Speek("opening whatsapp")
+                            window.open("https://www.whatsapp.com/","_blank");
                         }
                         else if (text.includes('instagram') || text.includes('insta') || text.includes('reels')) {
                             Speek("Openig Instagram")
+                            window.open("https://www.instagram.com/","_blank");
                         }
                         else if (text.includes('youtube') || text.includes('videos')) {
                             Speek("Opening Youtube")
+                            window.open("https://youtube.com/","_blank");
                         }
                         else{
                             Speek("These are the Results i found")
+                            idx = text.indexOf('open')
+                            tosearch = text.slice(idx+5)
+                            window.open('https://www.google.com/search?q='+tosearch);
+                            
                         }
                         break;
                     case text.indexOf('search') != -1:
