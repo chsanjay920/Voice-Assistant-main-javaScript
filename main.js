@@ -53,8 +53,7 @@ function startRecognization() {
                             Speek("These are the Results i found")
                             idx = text.indexOf('open')
                             tosearch = text.slice(idx+5)
-                            window.open('https://www.google.com/search?q='+tosearch);
-                            
+                            window.open('https://www.google.com/search?q='+tosearch);   
                         }
                         break;
                     case text.indexOf('search') != -1:
@@ -64,6 +63,7 @@ function startRecognization() {
                         window.open('https://www.google.com/search?q='+tosearch);
                         break
                     case text.indexOf('help') != -1 || text.indexOf('show commands'):
+                        Speek("These are the commands");
                         document.getElementById("help").click();
                         break
                     default:
