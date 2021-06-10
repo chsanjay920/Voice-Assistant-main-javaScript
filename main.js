@@ -1,6 +1,7 @@
 let count = 0
 function Animation_Control() {
     // this function starts animation and inistilize the speech recognize function
+    console.log(count);
     if(count %2 != 0){
         Speek("Rocket shutdown.")
         document.getElementById("coilcontainer").style.animationName = "none";
