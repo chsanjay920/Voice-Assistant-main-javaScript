@@ -7,7 +7,7 @@ function Animation_Control() {
         stopRocket();
     }
     else{
-        Speek("Rocket started.")
+        Speek("Voice assistaint started.")
         document.getElementById("coilcontainer").style.animationName = "reactor-anim";
         startRecognization();
     }
