@@ -25,6 +25,7 @@ function startRecognization() {
     recognition.interimResults = true;
     recognition.addEventListener('result', (e) => {
         let text = Array.from(e.results).map(result => result[0]).map(result => result.transcript).join('');
+        document.getElementById("voice_text").innerHTML=text;
         console.log(text);
         if (e.results[0].isFinal) {
             text = text.toLowerCase()
