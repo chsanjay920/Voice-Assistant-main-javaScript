@@ -212,7 +212,7 @@ body {
 }
 .voice_textbox{
     position: fixed;
-    top: 10%;
+    top: 5%;
     left: 10%;
     display: inline-block;
     background-color: #2a323318;
