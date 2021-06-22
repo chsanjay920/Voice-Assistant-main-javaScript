@@ -50,6 +50,10 @@ function startRecognization() {
                             Speek("Opening twitter")
                             window.open("https://twitter.com");
                         }
+                        else if(text.includes('discord')||text.includes('Discord')){
+                            Speek("Opening discord")
+                            window.open("https://discord.com/channels/@me");
+                        }
                         else{
                             Speek("These are the Results i found")
                             idx = text.indexOf('open')
