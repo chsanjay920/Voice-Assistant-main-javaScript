@@ -11,7 +11,7 @@ coded this project in java-script and with some HTML and deployed it as a simple
 ## Screen shot:
 
 <!-- ![screenshot](./images/Screenshot.png) -->
-<a href="https://sudoku-solver-by-sanjay.vercel.app">
+<a href="https://voice-assistant-main-java-script.vercel.app/">
 <p align="center">
   <img src="./images/Screenshot.png" alt="screenshot" width="500px" >
 </p>
